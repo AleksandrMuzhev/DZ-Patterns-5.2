@@ -50,6 +50,7 @@ class InternetBankTest {
         $("[data-test-id=password] input").setValue(blockedUser.getPassword());
         $("[data-test-id=action-login]").click();
         $("[data-test-id=error-notification].notification_status_error .notification__title").shouldHave(exactText("Ошибка"), Duration.ofSeconds(10));
+        $("[data-test-id=error-notification].notification_status_error .notification__content").shouldHave(exactText("Ошибка! Пользователь заблокирован"), Duration.ofSeconds(10));
     }
 
     @Test
