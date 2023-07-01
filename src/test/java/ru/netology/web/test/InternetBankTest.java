@@ -63,9 +63,6 @@ class InternetBankTest {
         $("[data-test-id=action-login]").click();
         $("[data-test-id=error-notification] .notification__title").shouldHave(exactText("Ошибка"), Duration.ofSeconds(10));
         $("[data-test-id=error-notification] .notification__content").shouldHave(exactText("Ошибка! Неверно указан логин или пароль"), Duration.ofSeconds(10));
-        // TODO: добавить логику теста в рамках которого будет выполнена попытка входа в личный кабинет с неверным
-        //  логином, для заполнения поля формы "Логин" используйте переменную wrongLogin,
-        //  "Пароль" - пользователя registeredUser
     }
 
     @Test
